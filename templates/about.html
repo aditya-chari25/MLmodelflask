@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+<h1>{% block title %} Index {% endblock %}</h1>
+{% block navigator %} Prediction{% endblock %}
+{% block content %}
+<h3 style="text-align:center">The Below prediction is due to the values given by you and it is evaluated using RandomForestClassifier</h3>
+<h3 style="text-align:center">The Predicted duration is {{name}}</h3>
+<p style="text-align:center;font-weight:bold;color:blue">Click heading to go back to make more predictions</p>
+{% endblock %}

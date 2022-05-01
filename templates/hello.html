@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<h1>{% block title %} Index {% endblock %}</h1>
+{% block navigator %} Make Prediction{% endblock %}
+{% block content %}
+    <h3 style="text-align:center">In the below input boxes, you have to the respective values in order to find the prediction</h3>
+    <center>
+    <form action="{{ url_for('about') }}" method="post">
+        <input type="number" name="type" placeholder="type" >
+        <input type="number" name="time" step="0.01" placeholder="time">
+        <input type="number" name="dayofweek" placeholder="dayofweek">
+        <input type="number" name="models" placeholder="models">
+        <input type="number" name="params" step="0.01" placeholder="params">
+        <input type="number" name="queuelen" placeholder="queuelen">
+        <input type="number" name="trails" placeholder="trails">
+        <br>
+        <input type="submit" style="margin-top:3vh">
+    </form>
+    </center>
+{% endblock %}
